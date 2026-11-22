@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.raksa/khmer-lint-mcp",
+  "title": "Khmer Lint",
+  "description": "Khmer text tools: spellcheck, word segmentation, zero-width fixes, NiDA keyboard conversions.",
+  "repository": {
+    "url": "https://github.com/raksa/khmer-lint-mcp-dist",
+    "source": "github"
+  },
+  "version": "0.1.3",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "khmer-lint-mcp",
+      "version": "0.1.3",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "KHMER_LINT_MCP_ROOTS",
+          "description": "Folders the file tools may use, besides the client's roots — a path list (':'-separated; ';' on Windows). With neither, the working directory.",
+          "isRequired": false
+        },
+        {
+          "name": "KHMER_LINT_MCP_READ_ONLY",
+          "description": "Set to 1 to never write a file: edits return the new text instead.",
+          "isRequired": false
+        },
+        {
+          "name": "KHMER_LINT_MCP_CUSTOM_WORDS",
+          "description": "A text file holding the custom dictionary, one word per line; created on the first addition.",
+          "isRequired": false
+        },
+        {
+          "name": "KHMER_LINT_MCP_DICTIONARY_DIR",
+          "description": "A folder with km_KH.aff, km_KH.dic and km_KH-suggest.aff to use instead of the bundled dictionaries.",
+          "isRequired": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "khmer-lint-mcp",
+  "version": "0.1.3",
+  "description": "MCP server for Khmer text: spellcheck that understands unspaced Khmer, word segmentation, lint and fixes for word breaks and zero-width characters, NiDA keyboard conversions — from any MCP client.",
+  "license": "MIT",
+  "author": "raksa <eng.raksa@gmail.com>",
+  "homepage": "https://github.com/raksa/khmer-lint-mcp-dist#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raksa/khmer-lint-mcp-dist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raksa/khmer-lint-mcp-dist/issues"
+  },
+  "type": "module",
+  "mcpName": "io.github.raksa/khmer-lint-mcp",
+  "bin": {
+    "khmer-lint-mcp": "dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*.md": "./*.md",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "*.md",
+    "LICENSE",
+    "server.json"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "khmer",
+    "km-KH",
+    "cambodia",
+    "spellcheck",
+    "segmentation",
+    "lint",
+    "nida"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "khmer-lint": "^0.1.0",
+    "zod": "^4.6.7"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
